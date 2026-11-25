@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+:root {
+  --background: #090d16;
+  --foreground: #f1f5f9;
+  --card: #111827;
+  --card-surface: #151e2e;
+  --sidebar: #0b1120;
+  --border: #1e293b;
+  --accent: #6366f1;
+  --accent-hover: #4f46e5;
+  --muted: #64748b;
+  --muted-foreground: #94a3b8;
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Soundwave animations for recording & audio waveforms */
+@keyframes pulse-wave {
+  0%, 100% {
+    transform: scaleY(0.3);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+.animate-wave-1 {
+  animation: pulse-wave 1.2s ease-in-out infinite;
+}
+.animate-wave-2 {
+  animation: pulse-wave 0.9s ease-in-out 0.2s infinite;
+}
+.animate-wave-3 {
+  animation: pulse-wave 1.4s ease-in-out 0.4s infinite;
+}
+.animate-wave-4 {
+  animation: pulse-wave 1s ease-in-out 0.1s infinite;
+}
+.animate-wave-5 {
+  animation: pulse-wave 1.3s ease-in-out 0.3s infinite;
+}
